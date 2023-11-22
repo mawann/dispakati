@@ -18,7 +18,7 @@
 
     // Fungsi untuk menangani interaksi mouse
     function handleMouseInteraction() {
-      setResult('Pengunjung web adalah manusia!');
+      window.location.href = 'https://www.mawan.id';
     }
 
     // Menambahkan event listener untuk interaksi mouse
@@ -26,7 +26,7 @@
 
     // Mengatur timeout untuk mengubah teks jika tidak ada interaksi dalam beberapa detik
     setTimeout(function() {
-      setResult('Pengunjung web mungkin adalah bot.');
+      setResult('<p><a href="https://www.mawan.id">Klik di sini</a> untuk menuju Mawan.id</p>');
       // Menghapus event listener setelah beberapa detik
       document.removeEventListener('mousemove', handleMouseInteraction);
     }, 5000);
