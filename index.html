@@ -1,1 +1,35 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DISPAKATI</title>
+</head>
+<body>
+  <h1>Selamat datang di situs kami!</h1>
+  <p id="result"></p>
+
+  <script>
+    // Fungsi untuk mengubah teks pada elemen dengan id "result"
+    function setResult(text) {
+      document.getElementById('result').innerText = text;
+    }
+
+    // Fungsi untuk menangani interaksi mouse
+    function handleMouseInteraction() {
+      setResult('Pengunjung web adalah manusia!');
+    }
+
+    // Menambahkan event listener untuk interaksi mouse
+    document.addEventListener('mousemove', handleMouseInteraction);
+
+    // Mengatur timeout untuk mengubah teks jika tidak ada interaksi dalam beberapa detik
+    setTimeout(function() {
+      setResult('Pengunjung web mungkin adalah bot.');
+      // Menghapus event listener setelah beberapa detik
+      document.removeEventListener('mousemove', handleMouseInteraction);
+    }, 5000);
+  </script>
+</body>
+</html>
